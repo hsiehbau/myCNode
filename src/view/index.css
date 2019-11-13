@@ -1,0 +1,48 @@
+
+@import '~antd/dist/antd.css';
+
+#logo {
+    color: aliceblue;
+    margin-bottom: 0;
+    text-align: center;
+}
+.pageWrap {
+    /* 相对于全屏的高度  */
+    min-height: 100vh;
+    /* width: auto; */
+    background-color: pink;
+}
+
+.wrap{
+    min-width: 980px;
+    margin: 0 auto ;
+}
+.headerDivider {
+    height: 44px;
+}
+#nav {
+    /* float: left; */
+    margin-left: 30px;
+    background: none;
+    border: none;
+    line-height: 62px;
+    /* position: relative; */
+}
+#nav a {
+    color: #fff;
+}
+#nav .ant-menu-item-selected a{
+    color: #1890ff;
+}
+#divide {
+    position: absolute;
+    top: 12px;
+}
+.xsNav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    /* height: 100px;
+    color: yellow; */
+}
