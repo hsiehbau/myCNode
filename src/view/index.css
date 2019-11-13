@@ -1,19 +1,21 @@
 
 @import '~antd/dist/antd.css';
 
+.pageWrap {
+    /* 相对于全屏的高度  */
+    min-height: 100vh;
+    display: flex;
+    /* width: auto; */
+    flex-direction: column;
+}
 #logo {
     color: aliceblue;
     margin-bottom: 0;
     text-align: center;
 }
-.pageWrap {
-    /* 相对于全屏的高度  */
-    min-height: 100vh;
-    /* width: auto; */
-    background-color: pink;
-}
 
 .wrap{
+    position: relative;
     min-width: 980px;
     margin: 0 auto ;
 }
@@ -21,12 +23,10 @@
     height: 44px;
 }
 #nav {
-    /* float: left; */
     margin-left: 30px;
     background: none;
     border: none;
     line-height: 62px;
-    /* position: relative; */
 }
 #nav a {
     color: #fff;
@@ -40,9 +40,45 @@
 }
 .xsNav {
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 0;
     width: auto;
     /* height: 100px;
     color: yellow; */
+}
+.main{
+    /* flex:1; */
+    background-color: pink;
+
+}
+.main .wrap {
+    border: 5px solid green;
+    border-top: none;
+}
+#indexMenu {
+    /* 记得去掉这个左侧导航栏的右边线 */
+    border-right: 3px solid black;
+}
+#indexMenu li {
+    margin-right: -1px;
+    transition: .5s;
+    text-align: center;
+    border-right: 3px solid rgba(0,0,0,0);
+}
+#indexMenu li:hover,
+#indexMenu .ant-menu-item-active{
+    background: #e6f7ff;
+    border-right-color: #1890ff;
+}
+#indexList {
+    border-left: 1px solid #000;
+}
+@media all and (max-width: 767px) {
+    #indexList{
+        display: flex;
+        border-bottom: 1px solid #ccc;
+    }
+    #indexList li {
+        margin: 0 0 -1px 0;
+    }
 }

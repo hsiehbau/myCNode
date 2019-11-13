@@ -28,7 +28,8 @@ class MainHeader extends Component {
                                     mode="vertical"
                                 />
                             }
-                            trigger = {["click", "touched"]}
+                            placement = "bottomRight"
+                            trigger = {["click", "touchend"]}
                         >
                             <Button><Icon type="bars"/></Button>
                         </Dropdown>
