@@ -18,6 +18,7 @@
     position: relative;
     min-width: 980px;
     margin: 0 auto ;
+    border:5px solid red;
 }
 .headerDivider {
     height: 44px;
@@ -54,6 +55,13 @@
 .main .wrap {
     border: 5px solid green;
     border-top: none;
+    overflow: hidden;
+}
+.indexSider {
+    border-right: 3px solid #ccc;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    
 }
 #indexMenu {
     /* 记得去掉这个左侧导航栏的右边线 */
@@ -70,15 +78,44 @@
     background: #e6f7ff;
     border-right-color: #1890ff;
 }
-#indexList {
-    border-left: 1px solid #000;
+#indexXsMenu {
+    display: flex;
 }
+#indexXsMenu li {
+    flex: 1;
+    float: none;
+    text-align: center;
+}
+.indexList {
+    padding: 0 10px;
+}
+.indexList p {
+    margin: 0;
+}
+
+/* .indexList {
+    border-left: 1px solid #000;
+} */
+/* 
+小屏下可以用xs来解决，避免繁琐
 @media all and (max-width: 767px) {
-    #indexList{
+    #indexMenu{
         display: flex;
         border-bottom: 1px solid #ccc;
     }
-    #indexList li {
-        margin: 0 0 -1px 0;
+    #indexMenu li {
+        flex: 1;
+        /* 让小导航栏的宽度撑满 */
+        /* margin: 0 0 -1px 0;
+        border: none;
+        border-bottom: 3px solid rgba(0,0,0,0);
     }
-}
+    #indexMenu li:hover,
+    #indexMenu .ant-menu-item-active{
+        background: none;
+        border-bottom-color: #1890ff;
+    }
+    .indexList {
+        border-left: none;
+    }
+}  */
