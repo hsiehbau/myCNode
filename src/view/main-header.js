@@ -10,17 +10,15 @@ class MainHeader extends Component {
                     <Col md={6} xs={24}>
                         <h1 id="logo">cNode</h1>
                     </Col>
-                    <Col md={12} xs={0} >
-                        <Nav
-                            id="nav"
-                            mode="horizontal"
-                        />
-                      
-
-                      
+                    <Col md={18} xs={0} >
                         <Divider id="divide" type="vertical" className="headerDivider" />
+                        <Nav
+                            id = "nav"
+                            mode = "horizontal"
+                        />
+                     
                     </Col>
-                    <Col md={6} xs={24} className="xsNav">
+                    <Col md={0} xs={24} className="xsNav">
                         <Dropdown 
                             overlay={
                                 <Nav
