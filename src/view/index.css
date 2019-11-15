@@ -98,8 +98,15 @@
 }
 .ant-list-item-meta {
     align-items: center;
+    min-width: 200px;
 }
-
+.ant-list-item-action {
+    margin-left: 45px;
+}
+/* 为防止有用户长传大图，所以要对图片做限制 */
+.wrap img {
+    max-width: 100%;
+}
 /* .indexList {
     border-left: 1px solid #000;
 } */
