@@ -96,6 +96,9 @@
 .indexList p {
     margin: 0;
 }
+.ant-list-item-meta {
+    align-items: center;
+}
 
 /* .indexList {
     border-left: 1px solid #000;

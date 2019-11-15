@@ -21,9 +21,7 @@ let linkData = `<a href="https://www.huoban.com/" target="_blank">
           <a href="http://yunzhihui.com/" target="_blank">
             <img src="//dn-cnode.qbox.me/Fq2cV_14IFHwelZ-6jey42Z0-eOR">
           </a>
-          <a href="http://www.jiguang.cn/" target="_blank">
-            <img src="//dn-cnode.qbox.me/FijGJbij9GObh5AXw-Vyu5LGn08a">
-          </a>
+          
           <a href="http://segmentfault.com/" target="_blank">
             <img src="//o4j806krb.qnssl.com/public/images/temp/sf.png">
           </a>
