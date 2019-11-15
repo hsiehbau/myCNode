@@ -103,9 +103,55 @@
 .ant-list-item-action {
     margin-left: 45px;
 }
-/* 为防止有用户长传大图，所以要对图片做限制 */
+/* 为防止有用户上传大图，所以要对图片做限制 */
 .wrap img {
     max-width: 100%;
+}
+.userAvatar {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+
+}
+.userInfo {
+    text-align: center;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+.userList {
+    line-height: 32px;
+}
+.userList .ant-list-item {
+    position: relative;
+}
+.userList .ant-list-item * {
+    vertical-align: middle;
+}
+
+.userList .ant-list-item-content {
+    display: block;
+}
+.userList .userName {
+    margin: 0 10px 0 5px;
+}
+.userList h4 {
+    display: inline-block;
+    margin: 0;
+}
+
+.userList time {
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+/* 调整小屏模式下的布局 */
+@media all and (max-width: 767px) {
+    .userList h4 {
+        display: block;
+    }
+
 }
 /* .indexList {
     border-left: 1px solid #000;

@@ -16,7 +16,7 @@ export default class ReplyList extends Component {
                 renderItem={(item)=>(
                     <List.Item
                         key={item.id}
-                        extra={item.ups.length>0?<span>有{item.ups.length}人觉得 这个回复很赞</span>:""}
+                        extra={item.ups.length>0?<span>有{item.ups.length}人觉得这个回复很赞</span>:""}
                     >
                         <List.Item.Meta
                             avatar={<Avatar src={item.author.avatar_url}/>}
