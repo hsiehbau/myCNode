@@ -39,7 +39,7 @@ class Details extends Component {
         console.log("进来了咩？？？？？");
         let {loading, data} = this.props;
         let {author, replies, reply_count, create_at, good} = data;
-        let {loginname, avatar_url} = author;
+        let {loginname, avatar_url} = author
         return (<div className="wrap">
             <TxtDetails 
                 loading = {loading}
