@@ -34,6 +34,7 @@ function user(state={
                     //loading默认true
                     loading: true,
                 }
+                
 
 
         default:

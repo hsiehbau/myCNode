@@ -1,35 +1,58 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import {Menu} from "antd";
-
+import tab from "../tab";
 class IndexMenu extends Component {
+    constructor(arg) {
+        super(arg);
+        let now = this.getNow(this.props.location);
+        this.state = {
+            now 
+        }
+    }
+    getNow(location) {
+        //console.log(location)
+        let now = location.pathname.split("/");
+        return now[2];
+        
+    }
+    shouldComponentUpdate(nextProps) {
+        let now = this.getNow(nextProps.location);
+        if(now !== this.state.now) {
+            this.setState({
+                now
+            })
+            return false;
+        }
+        return true;
+    }
     render() {
         return (
             <Menu 
                 id={this.props.id}
                 mode={this.props.mode}
+                selectedKeys={[this.state.now]}
             >
-                <Menu.Item>
-                    <Link to="/index/all">全部</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/index/good">精华</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/index/ask">问题</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/index/share">分享</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/index/job">招聘</Link>
-                </Menu.Item>
-                <Menu.Item>
-                    <Link to="/index/dev">测试</Link>
-                </Menu.Item>
+                {tab.map((item) => {
+                    if(!item.isIndex){
+                        return false
+                    }
+                    return(<Menu.Item key={item.tab}>
+                        <Link to={"/index/"+ item.tab}>{item.txt}</Link>
+                    </Menu.Item>)
+                })}
             </Menu>
         )
     }
 }
 
-export default IndexMenu;
+// export default IndexMenu;
+export default withRouter((props) => {
+    // console.log(props)
+    let {mode, id, location} = props;
+    return <IndexMenu
+        mode = {mode}
+        id = {id}
+        location = {location}
+    />;
+})
