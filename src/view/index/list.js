@@ -13,7 +13,8 @@ class IndexList extends Component {
             page: 1,
             // tab
         }
-        this.getData();
+        //如果不传参就会什么也显示不出来
+        this.getData(this.props.tab);
     }
     //组件或者redux更新的时候收到了新的props....会循环调用this.getData,形成死循环，要加个判断！！！！！！！！而且componentWillReceiveProps会在当前数据没有更新完的时候继续更新下一次，会有连续两次的更新操作，所以要换shouldc
     // componentWillReceiveProps(nextProps) {
