@@ -24,13 +24,13 @@ class Details extends Component {
                     dispatch({
                         type: "DETAILS_UPDATA_SUCC",
                         data: res.data
-                    })
+                    });
                 })
                 .catch((error) => {
                     dispatch({
                         type: "DETAILS_UPDATA_ERROR",
                       
-                    })
+                    });
                 })
         })
     }

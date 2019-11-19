@@ -34,7 +34,7 @@ class IndexList extends Component {
         }
         //通过判断一不一样来判断是否重新更新，如果不一样了 就先返回false，先不更新组件
         if(this.props.tab !== nextProps.tab){
-            this.state.page = 1;
+            // this.state.page = 1;
             this.getData(nextProps.tab, 0)
             this.setState({
                 page: 1
@@ -51,7 +51,7 @@ class IndexList extends Component {
                 type:"LIST_UPDATA"
             });
             //更新之前也需要给一个状态。。。。。。。。。。。。
-            axios.get(`https://cnodejs.org/api/v1/topics?tab=${tab}&page=${this.state.page}&limit=5`)
+            axios.get(`https://cnodejs.org/api/v1/topics?tab=${tab}&page=${this.state.page}&limit=10`)
             .then((res) => {
                 console.log(res.data);
                 dispatch({

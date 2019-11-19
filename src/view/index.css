@@ -2,23 +2,27 @@
 @import '~antd/dist/antd.css';
 
 .pageWrap {
-    /* 相对于全屏的高度  */
-    min-height: 100vh;
+    /* 相对于全屏的高度  ,使得footer固定在底部*/
+    min-height: 120vh;
     display: flex;
     /* width: auto; */
     flex-direction: column;
 }
-#logo {
-    color: aliceblue;
-    margin-bottom: 0;
-    text-align: center;
-}
+
 
 .wrap{
     position: relative;
     max-width: 980px;
     margin: 0 auto ;
     /* border:5px solid red; */
+}
+.wrap img {
+    max-width: 100%;
+}
+#logo {
+    color: aliceblue;
+    margin-bottom: 0;
+    text-align: center;
 }
 .headerDivider {
     float: left;
@@ -52,24 +56,23 @@
 }
 .main{
     flex:1;
-    /* margin-left: 30px; */
-    background-color: pink;
+    margin-left: 30px;
 
 }
 .main .wrap {
-    border: 5px solid green;
+    /* border: 5px solid green; */
     border-top: none;
-    /* overflow: visible; */
+    overflow: hidden;
 }
 .indexSider {
-    border-right: 3px solid #ccc;
-    padding-bottom: 9999px;
-    margin-bottom: -9999px;
+    border-right: 1px solid #ccc;
+    /* padding-bottom: 9999px;
+    margin-bottom: -9999px; */
     
 }
 #indexMenu {
     /* 记得去掉这个左侧导航栏的右边线 */
-    border-right: 3px solid black;
+    /* border-right: 3px solid green; */
 }
 #indexMenu li {
     margin-right: -1px;
@@ -150,6 +153,9 @@
 @media all and (max-width: 767px) {
     .userList h4 {
         display: block;
+    }
+    .pageWrap {
+        min-height: 150vh;
     }
 
 }
