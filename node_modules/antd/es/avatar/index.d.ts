@@ -24,7 +24,7 @@ export interface AvatarState {
 }
 export default class Avatar extends React.Component<AvatarProps, AvatarState> {
     static defaultProps: {
-        shape: "square" | "circle" | undefined;
+        shape: "circle" | "square" | undefined;
         size: number | "small" | "default" | "large" | undefined;
     };
     state: {

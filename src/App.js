@@ -8,14 +8,11 @@ class App extends Component {
   render() {
     return (
       <div className="pageWrap">
-
         <MainHeader />
         <main className="main ">
-          <RouterIndex />
-         
+          <RouterIndex /> 
         </main>
         <MainFooter />
-
       </div>
     )
   }

@@ -1,163 +1,148 @@
-
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 .pageWrap {
-    /* 相对于全屏的高度  ,使得footer固定在底部*/
-    min-height: 120vh;
-    display: flex;
-    /* width: auto; */
-    flex-direction: column;
+  /* 相对于全屏的高度  ,使得footer固定在底部*/
+  min-height: 100vh;
+  display: flex;
+  /* width: auto; */
+  flex-direction: column;
 }
 
-
-.wrap{
-    position: relative;
-    max-width: 980px;
-    margin: 0 auto ;
-    /* border:5px solid red; */
+.wrap {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  /* border:5px solid red; */
 }
 .wrap img {
-    max-width: 100%;
+  max-width: 100%;
 }
 #logo {
-    color: aliceblue;
-    margin-bottom: 0;
-    text-align: center;
+  color: aliceblue;
+  margin-bottom: 0;
+  text-align: center;
 }
 .headerDivider {
-    float: left;
-    margin: 10px 0;
-    height: 44px;
+  float: left;
+  margin: 10px 0;
+  height: 44px;
 }
 #nav {
-    float: left;
-    /* margin-left: 30px; */
-    background: none;
-    border: none;
-    line-height: 62px;
+  float: left;
+  background: none;
+  border: none;
+  line-height: 62px;
 }
 #nav a {
-    color: #fff;
+  color: #fff;
 }
-#nav .ant-menu-item-selected a{
-    color: #1890ff;
+#nav .ant-menu-item-selected a {
+  color: #1890ff;
 }
-/* #divide {
-    position: absolute;
-    top: 12px;
-} */
-.xsNav {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    width: auto;
-    /* height: 100px;
-    color: yellow; */
-}
-.main{
-    flex:1;
-    margin-left: 30px;
 
+.xsNav {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: auto;
+}
+.main {
+  flex: 1;
 }
 .main .wrap {
-    /* border: 5px solid green; */
-    border-top: none;
-    overflow: hidden;
+  border-top: none;
+  /* padding: 0; */
 }
 .indexSider {
-    border-right: 1px solid #ccc;
-    /* padding-bottom: 9999px;
-    margin-bottom: -9999px; */
-    
+  border-right: 1px solid #ccc;
 }
-#indexMenu {
-    /* 记得去掉这个左侧导航栏的右边线 */
-    /* border-right: 3px solid green; */
-}
+
 #indexMenu li {
-    margin-right: -1px;
-    transition: .5s;
-    text-align: center;
-    border-right: 3px solid rgba(0,0,0,0);
+  margin-right: -1px;
+  transition: 0.5s;
+  text-align: center;
+  border-right: 3px solid rgba(0, 0, 0, 0);
 }
 #indexMenu li:hover,
-#indexMenu .ant-menu-item-active{
-    background: #e6f7ff;
-    border-right-color: #1890ff;
+#indexMenu .ant-menu-item-active {
+  background: #e6f7ff;
+  border-right-color: #1890ff;
 }
 #indexXsMenu {
-    display: flex;
+  display: flex;
 }
 #indexXsMenu li {
-    flex: 1;
-    float: none;
-    text-align: center;
+  flex: 1;
+  float: none;
+  text-align: center;
 }
 .indexList {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 .indexList p {
-    margin: 0;
+  margin: 0;
 }
 .ant-list-item-meta {
-    align-items: center;
-    min-width: 200px;
+  align-items: center;
+  min-width: 200px;
 }
 .ant-list-item-action {
-    margin-left: 45px;
+  margin-left: 45px;
 }
 /* 为防止有用户上传大图，所以要对图片做限制 */
 .wrap img {
-    max-width: 100%;
+  max-width: 100%;
+}
+.ant-list-pagination {
+  margin: 12px auto;
+  text-align: right;
 }
 .userAvatar {
-    display: block;
-    margin: 10px auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
 }
 .userInfo {
-    text-align: center;
-    line-height: 24px;
-    padding-bottom: 10px;
+  text-align: center;
+  line-height: 24px;
+  padding-bottom: 10px;
 }
 .userList {
-    line-height: 32px;
+  line-height: 32px;
 }
 .userList .ant-list-item {
-    position: relative;
+  position: relative;
 }
 .userList .ant-list-item * {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .userList .ant-list-item-content {
-    display: block;
+  display: block;
 }
 .userList .userName {
-    margin: 0 10px 0 5px;
+  margin: 0 10px 0 5px;
 }
 .userList h4 {
-    display: inline-block;
-    margin: 0;
+  display: inline-block;
+  margin: 0;
 }
 
 .userList time {
-    position: absolute;
-    right: 0;
-    top: 12px;
+  position: absolute;
+  right: 0;
+  top: 12px;
 }
 /* 调整小屏模式下的布局 */
 @media all and (max-width: 767px) {
-    .userList h4 {
-        display: block;
-    }
-    .pageWrap {
-        min-height: 150vh;
-    }
-
+  .userList h4 {
+    display: block;
+  }
+  .pageWrap {
+    min-height: 150vh;
+  }
 }
 /* .indexList {
     border-left: 1px solid #000;
@@ -172,7 +157,7 @@
     #indexMenu li {
         flex: 1;
         /* 让小导航栏的宽度撑满 */
-        /* margin: 0 0 -1px 0;
+/* margin: 0 0 -1px 0;
         border: none;
         border-bottom: 3px solid rgba(0,0,0,0);
     }
